@@ -29,3 +29,11 @@ const updateMsgList = (msgJsonString) => {
 }
 
 socket.on('chat message', updateMsgList);
+
+const enterKeyListener = (event)=>{
+    if(event.keyCode == 13){
+        submitData();
+    }
+}
+
+document.addEventListener('keydown', enterKeyListener, false);
